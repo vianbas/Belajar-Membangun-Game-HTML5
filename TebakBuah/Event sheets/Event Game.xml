@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event Game</name>
+    <events>
+        <variable comment="no index urutan untuk menentukan soal yang akan keluar" constant="0" name="idxSoal" sid="542237188523373" static="0" type="number">0</variable>
+        <variable comment="jumlah maksimal soal muncul" constant="0" name="maxSoal" sid="652156051817191" static="0" type="number">5</variable>
+        <variable comment="nomor soal yang muncul)" constant="0" name="noSoal" sid="337764241146601" static="0" type="number">0</variable>
+        <variable comment="untuk menyimpan nilai" constant="0" name="score" sid="222368506913397" static="0" type="number">0</variable>
+        <variable comment="0: Permainan di jeda, 1: Permainan berjalan" constant="0" name="mulaiGame" sid="840501100524924" static="0" type="number">1</variable>
+        <variable comment="nilai index buah yang akan muncul sebagai soal" constant="0" name="idxBuah" sid="793065718883632" static="0" type="number">0</variable>
+        <event-block sid="807516274684253">
+            <conditions>
+                <condition id="0" name="On function" sid="945218884357960" type="Function">
+                    <param id="0" name="Name">&quot;SetupUrutanSoal&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set size" sid="680735141774565" type="UrutanSoal">
+                    <param id="0" name="Width">9</param>
+                    <param id="1" name="Height">1</param>
+                    <param id="2" name="Depth">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="965602601642799">
+                    <conditions>
+                        <condition id="-12" name="Repeat" sid="859048091272209" type="System">
+                            <param id="0" name="Count">9</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="536143667725210" type="UrutanSoal">
+                            <param id="0" name="X">loopindex</param>
+                            <param id="1" name="Value">loopindex</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="745714606889843">
+            <conditions>
+                <condition id="0" name="On function" sid="790839184631388" type="Function">
+                    <param id="0" name="Name">&quot;TampilkanSoalAcak&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="142595044058041" type="System">
+                    <param id="0" name="Variable">idxSoal</param>
+                    <param id="1" name="Value">int(random(0,UrutanSoal.Width))</param>
+                </action>
+                <action id="-9" name="Set value" sid="554405968591691" type="System">
+                    <param id="0" name="Variable">idxBuah</param>
+                    <param id="1" name="Value">UrutanSoal.At(idxSoal)</param>
+                </action>
+                <action id="5" name="Set frame" sid="785053784005297" type="Buah">
+                    <param id="0" name="Frame number">DaftarBuah.At(idxBuah, 0)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="330105069700835">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="947826152061184" type="Jawaban">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="369996921957749" type="Jawaban">
+                            <param id="0" name="Text">DaftarBuah.At(idxbuah,1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="912833995686658">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="853463533011254" type="Jawaban">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="868045212858567" type="Jawaban">
+                            <param id="0" name="Text">DaftarBuah.At(idxbuah,2)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="288974071987452">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="438647297358699" type="Jawaban">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="911868089921349" type="Jawaban">
+                            <param id="0" name="Text">DaftarBuah.At(idxbuah,3)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="921078749920266">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="309424919509999" type="Jawaban">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">DaftarBuah.At(idxbuah,4)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="333442592237040" type="Jawaban">
+                            <param id="0" name="Instance variable">benar</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="658793890437205">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="540993253158677" type="Jawaban">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">DaftarBuah.At(idxbuah,4)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="350350534185484" type="Jawaban">
+                            <param id="0" name="Instance variable">benar</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="9" name="Delete" sid="980743695674664" type="UrutanSoal">
+                            <param id="0" name="Index">idxSoal</param>
+                            <param id="1" name="Axis">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="262453927423310">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="655070731866961" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="735558800155773" type="Audio" />
+                <action id="0" name="Play" sid="417667612967319" type="Audio">
+                    <param id="0" name="Audio file">Musik2</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="388445853598100" type="Function">
+                    <param id="0" name="Name">&quot;SetupUrutanSoal&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="957081238546012" type="Function">
+                    <param id="0" name="Name">&quot;TampilkanSoalAcak&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="325594111067908" type="System">
+                    <param id="0" name="Layer">&quot;Quiz&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-18" name="Set layer opacity" sid="935228184523058" type="System">
+                    <param id="0" name="Layer">&quot;Background&quot;</param>
+                    <param id="1" name="Opacity">100</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="589733111890819" type="System">
+                    <param id="0" name="Layer">&quot;Hasil&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="5" name="Check item exists" sid="509446336068480" type="LocalStorage">
+                    <param id="0" name="Key">&quot;KeyTebakBuah&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="437992607022517">
+            <conditions>
+                <condition id="3" name="On touched object" sid="142200660767865" type="Touch">
+                    <param id="0" name="Object">Jawaban</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="943353067907256" type="System">
+                    <param id="0" name="Variable">mulaiGame</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="577886641051452" type="System">
+                    <param id="0" name="Variable">mulaiGame</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="278850844751439">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="185996900239467" type="Jawaban">
+                            <param id="0" name="Instance variable">benar</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="292582733520300" type="Audio">
+                            <param id="0" name="Audio file">SoundClick</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="507775501796563" type="Function">
+                            <param id="0" name="Name">&quot;TampilkanJawabanBenar&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="556674429705687" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="480673088834255" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">25</param>
+                        </action>
+                        <action id="0" name="Call function" sid="475883903375284" type="Function">
+                            <param id="0" name="Name">&quot;TampilkanSoalAcak&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="235200198905111" type="System">
+                            <param id="0" name="Variable">mulaiGame</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="702424056832381" type="System">
+                            <param id="0" name="Variable">noSoal</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="817396988726497">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="130074211579821" type="Jawaban">
+                            <param id="0" name="Instance variable">benar</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="357025551158893" type="Audio">
+                            <param id="0" name="Audio file">SoundOwh</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="366179779793133" type="Function">
+                            <param id="0" name="Name">&quot;TampilkanJawabanBenar&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="986731750675893" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="751970340926060" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                        <action id="0" name="Call function" sid="159037229416810" type="Function">
+                            <param id="0" name="Name">&quot;TampilkanSoalAcak&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="927337388866180" type="System">
+                            <param id="0" name="Variable">mulaiGame</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="267833512310476" type="System">
+                            <param id="0" name="Variable">noSoal</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="343719603489927">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="146845120898485" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">highscore</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="541674518377901" type="System">
+                    <param id="0" name="Variable">highscore</param>
+                    <param id="1" name="Value">score</param>
+                </action>
+                <action id="0" name="Set item" sid="930073574059438" type="LocalStorage">
+                    <param id="0" name="Key">&quot;KeyTebakBuah&quot;</param>
+                    <param id="1" name="Value">&quot;highscore&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="639136337459974">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="808005498947464" type="System">
+                    <param id="0" name="Variable">noSoal</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">maxSoal-1</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="977516484866720" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="667245780935123" type="System">
+                    <param id="0" name="Layer">&quot;Quiz&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-18" name="Set layer opacity" sid="453618156535802" type="System">
+                    <param id="0" name="Layer">&quot;Background&quot;</param>
+                    <param id="1" name="Opacity">40</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="919562710160831" type="System">
+                    <param id="0" name="Layer">&quot;Hasil&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Set text" sid="287024402009682" type="TextScore">
+                    <param id="0" name="Text"> &quot;Score : &quot;&amp;score</param>
+                </action>
+                <action id="-9" name="Set value" sid="310922562286301" type="System">
+                    <param id="0" name="Variable">mulaiGame</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="0" name="Set text" sid="716094755224181" type="TextHighScore">
+                    <param id="0" name="Text">&quot;Highscore : &quot;&amp;highscore</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="843360967346690">
+            <conditions>
+                <condition id="0" name="On function" sid="200979017480539" type="Function">
+                    <param id="0" name="Name">&quot;TampilkanJawabanBenar&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="624914423331650">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="392797041625790" type="Jawaban">
+                            <param id="0" name="Instance variable">benar</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="886646956226196" type="Jawaban">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="242284032186374">
+            <conditions>
+                <condition id="3" name="On touched object" sid="412673531492770" type="Touch">
+                    <param id="0" name="Object">Replay</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="705822999929185" type="System">
+                    <param id="0" name="Variable">mulaiGame</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="825001333332989" type="System">
+                    <param id="0" name="Variable">mulaiGame</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="861533278658802" type="System">
+                    <param id="0" name="Variable">noSoal</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="860452611197461" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="995050380421602" type="System">
+                    <param id="0" name="Layout">Layout Menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="511168176444020">
+            <conditions>
+                <condition id="17" name="On back button" sid="434983732403373" type="Browser" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="940400069139150" type="System">
+                    <param id="0" name="Variable">mulaiGame</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="354910413481514" type="System">
+                    <param id="0" name="Variable">noSoal</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="926740589459837" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="114195994824314" type="System">
+                    <param id="0" name="Layout">Layout Menu</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

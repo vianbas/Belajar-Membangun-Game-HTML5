@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Card Match</name>
+    <description>Latihan 2</description>
+    <version>1.0.0.0</version>
+    <author>Viko Manurung</author>
+    <author-email>vikomanurung@gmail.com</author-email>
+    <author-website>https://www.dicoding.com/users/84919</author-website>
+    <app-id>com.viko.cardmatch</app-id>
+    <unique-id>2m2oqhlgof90t</unique-id>
+    <saved-with-version>24400</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Chris Kent" id="SpriteFontPlus" version="1">SpriteFont+</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors />
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1280</width>
+        <height>720</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Layout 1</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Scale outer</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D web</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Kartu" sid="613430477335872">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="id" sid="688065345933295" type="number" />
+                <instance-variable name="warna" sid="647146823438019" type="number" />
+                <instance-variable name="buka" sid="326843958058091" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="193845269072601" speed="0">
+                    <frame duration="1" hotspotX="0.502488" hotspotY="0.5" original-source="C:\Users\viko\Documents\Construct\AssetCardMatch\Asset Kartu\KartuMonster0.png" />
+                    <frame duration="1" hotspotX="0.502488" hotspotY="0.5" original-source="C:\Users\viko\Documents\Construct\AssetCardMatch\Asset Kartu\KartuMonster1.png" />
+                    <frame duration="1" hotspotX="0.502488" hotspotY="0.5" original-source="C:\Users\viko\Documents\Construct\AssetCardMatch\Asset Kartu\KartuMonster2.png" />
+                    <frame duration="1" hotspotX="0.502488" hotspotY="0.5" original-source="C:\Users\viko\Documents\Construct\AssetCardMatch\Asset Kartu\KartuMonster3.png" />
+                    <frame duration="1" hotspotX="0.502488" hotspotY="0.5" original-source="C:\Users\viko\Documents\Construct\AssetCardMatch\Asset Kartu\KartuMonster4.png" />
+                    <frame duration="1" hotspotX="0.502488" hotspotY="0.5" original-source="C:\Users\viko\Documents\Construct\AssetCardMatch\Asset Kartu\KartuMonster5.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="DaftarKartu" sid="943965233568046">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="Touch" sid="427619370688733">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="TextScore" sid="135496225585994">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Timer" sid="230093395931579">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\viko\Documents\Construct\AssetCardMatch\AssetMatchMonster\Timer.png" />
+        </object-type>
+        <object-type name="TextGameover" sid="841190712926533">
+            <plugin id="SpriteFontPlus" />
+            <texture original-source="C:\Users\viko\Documents\Construct\AssetCardMatch\Font\SpriteFont_ErasITC_Medium_(48)_[0,0,0,0]_53x54.png" />
+        </object-type>
+        <object-type name="Background" sid="777039685307616">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="766712573096642" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\viko\Documents\Construct\AssetCardMatch\AssetMatchMonster\Background.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Nama" sid="234795895907702">
+            <plugin id="Text" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Layout 1.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="11">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

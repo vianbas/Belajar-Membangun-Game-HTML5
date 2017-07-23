@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event Loading</name>
+    <events>
+        <variable constant="0" name="highscore" sid="761898480744704" static="0" type="number">0</variable>
+        <event-block sid="280704217858551">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="498169155884103" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Preload" sid="759820570095933" type="Audio">
+                    <param id="0" name="Audio file">Musik1</param>
+                </action>
+                <action id="4" name="Preload" sid="411349657028405" type="Audio">
+                    <param id="0" name="Audio file">Musik2</param>
+                </action>
+                <action id="1" name="Request project file" sid="277348999775820" type="AJAX">
+                    <param id="0" name="Tag">&quot;DataQuiz&quot;</param>
+                    <param id="1" name="File">DataQuiz.json</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="993289204004703">
+            <conditions>
+                <condition id="0" name="On completed" sid="764022785331476" type="AJAX">
+                    <param id="0" name="Tag">&quot;DataQuiz&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="11" name="Load" sid="924373219673187" type="DaftarBuah">
+                    <param id="0" name="JSON">AJAX.LastData</param>
+                </action>
+                <action id="-16" name="Wait" sid="655706443972233" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="669920105226558" type="System">
+                    <param id="0" name="Layout">Layout Menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="473412108722766">
+            <conditions>
+                <condition id="9" name="On item exists" sid="738981731475917" type="LocalStorage">
+                    <param id="0" name="Key">&quot;KeyTebakBuah&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Get item" sid="858532723219060" type="LocalStorage">
+                    <param id="0" name="Key">&quot;KeyTebakBuah&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="100087353374210">
+            <conditions>
+                <condition id="1" name="On item get" sid="127446250870468" type="LocalStorage">
+                    <param id="0" name="Key">&quot;KeyTebakBuah&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="728429983373911" type="System">
+                    <param id="0" name="Variable">highscore</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="958475813079077">
+            <conditions>
+                <condition id="10" name="On item missing" sid="491113276742822" type="LocalStorage">
+                    <param id="0" name="Key">&quot;KeyTebakBuah&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set item" sid="808664139308555" type="LocalStorage">
+                    <param id="0" name="Key">&quot;KeyTebakBuah&quot;</param>
+                    <param id="1" name="Value">&quot;highscore&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

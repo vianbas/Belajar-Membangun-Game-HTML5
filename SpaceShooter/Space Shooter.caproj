@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Space Shooter</name>
+    <description>Latihan 1</description>
+    <version>1.0.0.0</version>
+    <author>Viko Manurung</author>
+    <author-email>vikomanurung@gmail.com</author-email>
+    <author-website>https://www.dicoding.com/users/84919</author-website>
+    <app-id>com.viko.SpaceShooter</app-id>
+    <unique-id>2m2oqhlgof90t</unique-id>
+    <saved-with-version>24400</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>720</width>
+        <height>1280</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Layout 1</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Portrait</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Pesawat" sid="840729136757734">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Wrap" sid="118535239157844">
+                    <behavior id="wrap" />
+                </behavior-type>
+                <behavior-type name="8Direction" sid="101902194244187">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="723096977900906" speed="5">
+                    <frame duration="1" hotspotX="0.199396" hotspotY="0.242647" original-source="C:\Users\viko\Downloads\Compressed\AssetSpaceShooterGame\Pesawat.png">
+                        <image-point name="Imagepoint 1" x="0.92145" y="0.5" />
+                        <collision-poly>
+                            <point x="0.800604" y="0.242647" />
+                            <point x="0.703928" y="0.5" />
+                            <point x="0.800604" y="0.757353" />
+                            <point x="0.501511" y="0.849265" />
+                            <point x="0.314199" y="0.617647" />
+                            <point x="0.141994" y="0.5" />
+                            <point x="0.326284" y="0.397059" />
+                            <point x="0.501511" y="0.158088" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Meteor" sid="920800919418770">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="733640200624375">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="428525490442947">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="948168274480777" speed="5">
+                    <frame duration="1" hotspotX="0.503497" hotspotY="0.503497" original-source="C:\Users\viko\Downloads\Compressed\AssetSpaceShooterGame\Meteor.png">
+                        <collision-poly>
+                            <point x="0.216783" y="0.783217" />
+                            <point x="0.0979021" y="0.503497" />
+                            <point x="0.216783" y="0.216783" />
+                            <point x="0.496504" y="0.0979021" />
+                            <point x="0.783217" y="0.216783" />
+                            <point x="0.902098" y="0.503497" />
+                            <point x="0.783217" y="0.783217" />
+                            <point x="0.496504" y="0.902098" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Peluru" sid="564149345636244">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="158331173197202">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="613121335441783">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="663907113831226" speed="5">
+                    <frame duration="1" hotspotX="0.504505" hotspotY="0.5" original-source="C:\Users\viko\Downloads\Compressed\AssetSpaceShooterGame\Peluru.png">
+                        <collision-poly>
+                            <point x="0.792793" y="0.280488" />
+                            <point x="0.945946" y="0.5" />
+                            <point x="0.774775" y="0.695122" />
+                            <point x="0.504505" y="0.743902" />
+                            <point x="0.261261" y="0.5" />
+                            <point x="0.27027" y="0.365854" />
+                            <point x="0.504505" y="0.195122" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Touch" sid="256532935409334">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="LedakanMeteor" sid="670329315256457">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="LedakanPesawat" sid="119214467035948">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="Audio" sid="859256388410050">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="BgScore" sid="990654347020049">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="183284895671246" speed="5">
+                    <frame duration="1" hotspotX="0.501229" hotspotY="0.5" original-source="C:\Users\viko\Downloads\Compressed\AssetSpaceShooterGame\BgScore.png">
+                        <collision-poly>
+                            <point x="0.0884521" y="0.285714" />
+                            <point x="0.498771" y="0" />
+                            <point x="0.911548" y="0.285714" />
+                            <point x="0.847666" y="0.507937" />
+                            <point x="0.498771" y="0.801587" />
+                            <point x="0.152334" y="0.507937" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextScore" sid="674362930021333">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Sprite" sid="634516432459660">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="823996837047280" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501887" original-source="C:\Users\viko\Downloads\Compressed\AssetSpaceShooterGame\GameOver.png">
+                        <collision-poly>
+                            <point x="0.0357143" y="0.0754717" />
+                            <point x="0.964286" y="0.0754717" />
+                            <point x="0.964286" y="0.924528" />
+                            <point x="0.5" y="0.90566" />
+                            <point x="0.0357143" y="0.924528" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Background" sid="737737202334667">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="341382815525566" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\viko\Downloads\Compressed\AssetSpaceShooterGame\Background.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Layout 1.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="2">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Audio" uid="6">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <file name="SoundDestroy.ogg" />
+        <file name="SoundPeluru.ogg" />
+    </sounds-folder>
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event Menu</name>
+    <events>
+        <event-block sid="461015206691851">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="875864107972227" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="581854699949874" type="Audio" />
+                <action id="0" name="Play" sid="905798255541879" type="Audio">
+                    <param id="0" name="Audio file">Musik1</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="173590493664131">
+            <conditions>
+                <condition id="3" name="On touched object" sid="122328180483763" type="Touch">
+                    <param id="0" name="Object">Play</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="419397496664595" type="System">
+                    <param id="0" name="Layout">Layout Game</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

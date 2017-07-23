@@ -1,0 +1,441 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Tebak Buah</name>
+    <description>Latihan 3</description>
+    <version>1.0.0.0</version>
+    <author>Viko Manurung</author>
+    <author-email>vikomanurung@gmail.com</author-email>
+    <author-website>https://www.dicoding.com/users/84919</author-website>
+    <app-id>com.viko.TebakBuah</app-id>
+    <unique-id>2m2oqhlgof90t</unique-id>
+    <saved-with-version>24400</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>720</width>
+        <height>1280</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Portrait</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Buah" sid="578927987697979">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="991093196303488">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Sine2" sid="332481921119647">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="113238858671372" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502488" original-source="C:\Users\viko\AppData\Local\Temp\Rar$DRa0.921\Buah\1. Anggur.png">
+                        <collision-poly>
+                            <point x="0.228261" y="0.208955" />
+                            <point x="0.5" y="0.0895522" />
+                            <point x="0.75" y="0.228856" />
+                            <point x="0.913043" y="0.497512" />
+                            <point x="0.728261" y="0.751244" />
+                            <point x="0.5" y="0.895522" />
+                            <point x="0.228261" y="0.791045" />
+                            <point x="0.0978261" y="0.497512" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.502959" hotspotY="0.502513" original-source="C:\Users\viko\AppData\Local\Temp\Rar$DRa0.921\Buah\2. Cabai.png">
+                        <collision-poly>
+                            <point x="0.242604" y="0.20603" />
+                            <point x="0.497041" y="0.105528" />
+                            <point x="0.775148" y="0.190955" />
+                            <point x="0.893491" y="0.497487" />
+                            <point x="0.733728" y="0.773869" />
+                            <point x="0.497041" y="0.899498" />
+                            <point x="0.195266" y="0.834171" />
+                            <point x="0.118343" y="0.497487" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502564" original-source="C:\Users\viko\AppData\Local\Temp\Rar$DRa0.921\Buah\3. Ceri.png">
+                        <collision-poly>
+                            <point x="0.209524" y="0.225641" />
+                            <point x="0.5" y="0.0871795" />
+                            <point x="0.714286" y="0.307692" />
+                            <point x="0.8" y="0.497436" />
+                            <point x="0.866667" y="0.85641" />
+                            <point x="0.5" y="0.784615" />
+                            <point x="0.161905" y="0.825641" />
+                            <point x="0.138095" y="0.497436" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.502347" hotspotY="0.502439" original-source="C:\Users\viko\AppData\Local\Temp\Rar$DRa0.921\Buah\4. Jeruk.png">
+                        <collision-poly>
+                            <point x="0.234742" y="0.243902" />
+                            <point x="0.497653" y="0.165854" />
+                            <point x="0.882629" y="0.121951" />
+                            <point x="0.920188" y="0.497561" />
+                            <point x="0.741784" y="0.731707" />
+                            <point x="0.497653" y="0.912195" />
+                            <point x="0.178404" y="0.814634" />
+                            <point x="0.0751174" y="0.497561" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.503067" hotspotY="0.5" original-source="C:\Users\viko\AppData\Local\Temp\Rar$DRa0.921\Buah\5. Lemon.png">
+                        <collision-poly>
+                            <point x="0.361963" y="0.29798" />
+                            <point x="0.496933" y="0.0858586" />
+                            <point x="0.803681" y="0.161616" />
+                            <point x="0.895706" y="0.5" />
+                            <point x="0.760736" y="0.80303" />
+                            <point x="0.496933" y="0.90404" />
+                            <point x="0.147239" y="0.878788" />
+                            <point x="0.128834" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.502538" hotspotY="0.5" original-source="C:\Users\viko\AppData\Local\Temp\Rar$DRa0.921\Buah\6. Pir.png">
+                        <collision-poly>
+                            <point x="0.213198" y="0.21" />
+                            <point x="0.497462" y="0.28" />
+                            <point x="0.598985" y="0.395" />
+                            <point x="0.852792" y="0.5" />
+                            <point x="0.857868" y="0.86" />
+                            <point x="0.497462" y="0.885" />
+                            <point x="0.213198" y="0.79" />
+                            <point x="0.0964467" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\viko\AppData\Local\Temp\Rar$DRa0.921\Buah\7. Pisang.png">
+                        <collision-poly>
+                            <point x="0.232673" y="0.237374" />
+                            <point x="0.5" y="0.247475" />
+                            <point x="0.861386" y="0.141414" />
+                            <point x="0.915842" y="0.5" />
+                            <point x="0.79703" y="0.792929" />
+                            <point x="0.5" y="0.914141" />
+                            <point x="0.193069" y="0.80303" />
+                            <point x="0.0792079" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\viko\AppData\Local\Temp\Rar$DRa0.921\Buah\8. Tomat.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.245" />
+                            <point x="0.5" y="0.08" />
+                            <point x="0.744898" y="0.25" />
+                            <point x="0.918367" y="0.5" />
+                            <point x="0.806122" y="0.81" />
+                            <point x="0.5" y="0.92" />
+                            <point x="0.183673" y="0.82" />
+                            <point x="0.0867347" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.503067" hotspotY="0.5" original-source="C:\Users\viko\AppData\Local\Temp\Rar$DRa0.921\Buah\9. Wortel.png">
+                        <collision-poly>
+                            <point x="0.337423" y="0.280612" />
+                            <point x="0.496933" y="0.132653" />
+                            <point x="0.815951" y="0.153061" />
+                            <point x="0.797546" y="0.5" />
+                            <point x="0.674847" y="0.729592" />
+                            <point x="0.496933" y="0.862245" />
+                            <point x="0.147239" y="0.877551" />
+                            <point x="0.147239" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Audio" sid="376796275272630">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Loading" sid="151246392438949">
+            <plugin id="Text" />
+        </object-type>
+        <object-type global="1" name="DaftarBuah" sid="422528648628030">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="AJAX" sid="432235484782014">
+            <plugin id="AJAX" />
+        </object-type>
+        <object-type name="Background" sid="182410441143380">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\viko\Documents\Construct\AssetTebakBuah\Halaman Menu\Background.png" />
+        </object-type>
+        <object-type name="Name" sid="477988558870780">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Cahaya" sid="527055818084886">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="875653903348278">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Sine2" sid="860090213246566">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="173947176318817" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\viko\Documents\Construct\AssetTebakBuah\Halaman Menu\Cahaya.png">
+                        <collision-poly>
+                            <point x="0.421995" y="0.421995" />
+                            <point x="0.5" y="0.361893" />
+                            <point x="0.594629" y="0.405371" />
+                            <point x="0.61509" y="0.5" />
+                            <point x="0.584399" y="0.584399" />
+                            <point x="0.5" y="0.638107" />
+                            <point x="0.407928" y="0.592072" />
+                            <point x="0.378517" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Judul" sid="598613422054838">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="105662430945787" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\viko\Documents\Construct\AssetTebakBuah\Halaman Menu\Judul.png">
+                        <collision-poly>
+                            <point x="0.0907692" y="0.174556" />
+                            <point x="0.5" y="0.106509" />
+                            <point x="0.904615" y="0.183432" />
+                            <point x="0.912308" y="0.831361" />
+                            <point x="0.5" y="0.934911" />
+                            <point x="0.0907692" y="0.825444" />
+                            <point x="0.127692" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Play" sid="451712743398870">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="869545791232187" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\viko\Documents\Construct\AssetTebakBuah\Halaman Menu\Play.png">
+                        <collision-poly>
+                            <point x="0.236025" y="0.255034" />
+                            <point x="0.5" y="0.0671141" />
+                            <point x="0.767081" y="0.251678" />
+                            <point x="0.897516" y="0.5" />
+                            <point x="0.875776" y="0.865772" />
+                            <point x="0.5" y="0.932886" />
+                            <point x="0.136646" y="0.852349" />
+                            <point x="0.108696" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Pertanyaan" sid="739626954818740">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="335342477289436" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\viko\Documents\Construct\AssetTebakBuah\Halaman Gameplay\Pertanyaan.png">
+                        <collision-poly>
+                            <point x="0.0245536" y="0.152778" />
+                            <point x="0.5" y="0" />
+                            <point x="0.975446" y="0.152778" />
+                            <point x="1" y="0.5" />
+                            <point x="0.975446" y="0.847222" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0245536" y="0.847222" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tombol" sid="752974943211550">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="802787816101404" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\viko\Documents\Construct\AssetTebakBuah\Halaman Gameplay\Tombol.png">
+                        <collision-poly>
+                            <point x="0.0478723" y="0.123288" />
+                            <point x="0.5" y="0" />
+                            <point x="0.941489" y="0.150685" />
+                            <point x="1" y="0.5" />
+                            <point x="0.957447" y="0.890411" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0478723" y="0.876712" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Jawaban" sid="584308614374074">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable comment="id unik jawaban" name="id" sid="375431197428130" type="number" />
+                <instance-variable comment="0:bernilai salah, 1:bernilai benar" name="benar" sid="379604654296815" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Flash" sid="956151030358731">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="Touch" sid="398595397323574">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type global="1" name="UrutanSoal" sid="721705351684143">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="Function" sid="659037101956610">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="Board" sid="292156690734512">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="608316947602407" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\viko\Documents\Construct\AssetTebakBuah\Halaman Akhir\Board.png">
+                        <collision-poly>
+                            <point x="0.0574018" y="0.0483461" />
+                            <point x="0.5" y="0.019084" />
+                            <point x="0.941088" y="0.0496183" />
+                            <point x="0.977341" y="0.5" />
+                            <point x="0.941088" y="0.950382" />
+                            <point x="0.5" y="0.980916" />
+                            <point x="0.0589124" y="0.950382" />
+                            <point x="0.0226586" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Complete" sid="713257376027221">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="859112095715438" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\viko\Documents\Construct\AssetTebakBuah\Halaman Akhir\Complete.png">
+                        <collision-poly>
+                            <point x="0.0728745" y="0.222222" />
+                            <point x="0.5" y="0.246914" />
+                            <point x="0.941296" y="0.179012" />
+                            <point x="0.94332" y="0.82716" />
+                            <point x="0.5" y="0.685185" />
+                            <point x="0.0728745" y="0.777778" />
+                            <point x="0.0506073" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Replay" sid="526247282728767">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="730739068978809" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\viko\Documents\Construct\AssetTebakBuah\Halaman Akhir\Replay.png">
+                        <collision-poly>
+                            <point x="0.267045" y="0.284848" />
+                            <point x="0.5" y="0.115152" />
+                            <point x="0.738636" y="0.278788" />
+                            <point x="0.855114" y="0.5" />
+                            <point x="0.835227" y="0.824242" />
+                            <point x="0.5" y="0.878788" />
+                            <point x="0.178977" y="0.809091" />
+                            <point x="0.150568" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextScore" sid="423243421557896">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TextHighScore" sid="927531260382730">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="LocalStorage" sid="643698219786449">
+            <plugin id="LocalStorage" />
+        </object-type>
+        <object-type name="Browser" sid="235598323509109">
+            <plugin id="Browser" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Layout Loading.xml</layout>
+        <layout>Layout Menu.xml</layout>
+        <layout>Layout Game.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event Loading.xml</event-sheet>
+        <event-sheet>Event Menu.xml</event-sheet>
+        <event-sheet>Event Game.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Audio" uid="1">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="AJAX" uid="4" />
+        <global-instance type="Touch" uid="20">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Function" uid="22" />
+        <global-instance type="LocalStorage" uid="27" />
+        <global-instance type="Browser" uid="28" />
+    </global-instances>
+    <sounds-folder>
+        <file name="Musik1.ogg" />
+        <file name="Musik2.ogg" />
+        <file name="SoundClick.ogg" />
+        <file name="SoundOwh.ogg" />
+    </sounds-folder>
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+        <file name="DataQuiz.json" />
+    </files-folder>
+</c2project>

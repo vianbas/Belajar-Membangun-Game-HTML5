@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable comment="menyimpan nilai tertinggi" constant="0" name="highscore" sid="581907871982053" static="0" type="number">0</variable>
+        <variable comment="0:game tidak aktif, 1: game Aktif" constant="0" name="mulaiGame" sid="980482558352916" static="0" type="number">1</variable>
+        <variable comment="menyimpan id kartu kedua yang dibuka" constant="0" name="bukaKartu2" sid="222240615087595" static="0" type="number">0</variable>
+        <variable comment="menyimpan id kartu pertama yang dibuka" constant="0" name="bukaKartu1" sid="580142625423500" static="0" type="number">0</variable>
+        <variable comment="keterangan nilai" constant="0" name="score" sid="960409956674455" static="0" type="number">0</variable>
+        <variable comment="0:Pilih kartu pertama, 1: Pilih kartu kedua, 2: Bandingkan kartu" constant="0" name="tahap" sid="844748783629045" static="0" type="number">0</variable>
+        <variable comment="menyimpan nilai sementara" constant="0" name="acak" sid="307427273937778" static="0" type="number">0</variable>
+        <event-block sid="417869697291441">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="556174666212441" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Set size" sid="180046710390008" type="DaftarKartu">
+                    <param id="0" name="Width">10</param>
+                    <param id="1" name="Height">1</param>
+                    <param id="2" name="Depth">1</param>
+                </action>
+                <action id="2" name="Set at X" sid="899128804272487" type="DaftarKartu">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="2" name="Set at X" sid="262296749455964" type="DaftarKartu">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="2" name="Set at X" sid="209927878980305" type="DaftarKartu">
+                    <param id="0" name="X">2</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="2" name="Set at X" sid="136608841827949" type="DaftarKartu">
+                    <param id="0" name="X">3</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="2" name="Set at X" sid="678979483997836" type="DaftarKartu">
+                    <param id="0" name="X">4</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="2" name="Set at X" sid="768962516230865" type="DaftarKartu">
+                    <param id="0" name="X">5</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="2" name="Set at X" sid="185280277742569" type="DaftarKartu">
+                    <param id="0" name="X">6</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+                <action id="2" name="Set at X" sid="376976211891686" type="DaftarKartu">
+                    <param id="0" name="X">7</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+                <action id="2" name="Set at X" sid="447339520652725" type="DaftarKartu">
+                    <param id="0" name="X">8</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+                <action id="2" name="Set at X" sid="884270411630444" type="DaftarKartu">
+                    <param id="0" name="X">9</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+                <action id="-9" name="Set value" sid="324289635557965" type="System">
+                    <param id="0" name="Variable">mulaiGame</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="674751724940962" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="559210343358052" type="System">
+                    <param id="0" name="Variable">tahap</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="972939526790260" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-18" name="Set layer opacity" sid="182056671397485" type="System">
+                    <param id="0" name="Layer">0</param>
+                    <param id="1" name="Opacity">100</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="894913890458176">
+                    <conditions>
+                        <condition id="-10" name="For" sid="414583766391691" type="System">
+                            <param id="0" name="Name">&quot;SetWarnaKartu&quot;</param>
+                            <param id="1" name="Start index">9</param>
+                            <param id="2" name="End index">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="510131455733802">
+                            <conditions>
+                                <condition id="-13" name="Pick nth instance" sid="776884929057131" type="System">
+                                    <param id="0" name="Object">Kartu</param>
+                                    <param id="1" name="Instance">loopindex</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="173099662303714" type="System">
+                                    <param id="0" name="Variable">acak</param>
+                                    <param id="1" name="Value">int(random(0,loopindex+1))</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="163028399953523" type="Kartu">
+                                    <param id="0" name="Instance variable">warna</param>
+                                    <param id="1" name="Value">DaftarKartu.At(acak)</param>
+                                </action>
+                                <action id="9" name="Delete" sid="418250691479765" type="DaftarKartu">
+                                    <param id="0" name="Index">acak</param>
+                                    <param id="1" name="Axis">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="672936110270473">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="433211820249624" type="System">
+                    <param id="0" name="Variable">tahap</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" inverted="1" name="Compare variable" sid="956819530393148" type="System">
+                    <param id="0" name="Variable">mulaiGame</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="126238313179040">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="174839766763696" type="Touch">
+                            <param id="0" name="Object">Kartu</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="514119250143307" type="System">
+                            <param id="0" name="Variable">mulaiGame</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="984705906408565">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="270903948007946" type="Kartu">
+                                    <param id="0" name="Instance variable">buka</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="684990101872949" type="System">
+                                    <param id="0" name="Variable">bukaKartu1</param>
+                                    <param id="1" name="Value">Kartu.warna</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="604128655737607" type="Kartu">
+                                    <param id="0" name="Instance variable">buka</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="493282416936952" type="Kartu">
+                                    <param id="0" name="Frame number">Kartu.warna</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="600911516887374" type="System">
+                                    <param id="0" name="Variable">tahap</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="594769288144126">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="698805751814519" type="System">
+                    <param id="0" name="Variable">tahap</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" inverted="1" name="Compare variable" sid="657750303209228" type="System">
+                    <param id="0" name="Variable">mulaiGame</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="490362227778848">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="601542274195498" type="Touch">
+                            <param id="0" name="Object">Kartu</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="704702051049474">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="278658496550450" type="Kartu">
+                                    <param id="0" name="Instance variable">buka</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="989089757593781" type="System">
+                                    <param id="0" name="Variable">bukaKartu2</param>
+                                    <param id="1" name="Value">Kartu.warna</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="466391178373972" type="Kartu">
+                                    <param id="0" name="Instance variable">buka</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="702639456087969" type="Kartu">
+                                    <param id="0" name="Frame number">Kartu.warna</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="812253314341526" type="System">
+                                    <param id="0" name="Variable">tahap</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="258419396554641">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="234820467795379" type="System">
+                    <param id="0" name="Variable">tahap</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-14" inverted="1" name="Compare variable" sid="481191312685063" type="System">
+                    <param id="0" name="Variable">mulaiGame</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="772793643663973">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="494119075845450" type="System">
+                            <param id="0" name="Variable">bukaKartu1</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">bukaKartu2</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="741594558197030" type="Kartu">
+                            <param id="0" name="Instance variable">buka</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="106574877473000" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="997156403336619" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="234384742342976" type="Kartu" />
+                        <action id="-10" name="Add to" sid="580191563289941" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">25</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="155086791618744" type="System">
+                            <param id="0" name="Variable">tahap</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="814533567007515" type="TextScore">
+                            <param id="0" name="Text">score</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="345327726294833">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="232056045841482" type="System">
+                            <param id="0" name="Variable">bukaKartu1</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">bukaKartu2</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="239228089892873" type="Kartu">
+                            <param id="0" name="Instance variable">buka</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="636987724028265" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="249535441561277" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="724442559656871" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="531788934461420" type="System">
+                            <param id="0" name="Variable">tahap</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="364059699110446" type="Kartu">
+                            <param id="0" name="Instance variable">buka</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="793267052661721" type="Kartu">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="966171768205098" type="TextScore">
+                            <param id="0" name="Text">score</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="740576189095948">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="207135568829983" type="System">
+                    <param id="0" name="Variable">mulaiGame</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="482621459216818">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="310103415125038" type="System">
+                            <param id="0" name="Interval (seconds)">0.3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="227770603581796" type="Timer">
+                            <param id="0" name="Width">Self.Width - 18</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="810323229071937">
+                    <conditions>
+                        <condition id="-5" name="Compare width" sid="581420667638883" type="Timer">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Width">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="992293120781513" type="System">
+                            <param id="0" name="Variable">mulaiGame</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="0" name="Set text" sid="431518912249831" type="TextGameover">
+                            <param id="0" name="Text">&quot;YOU LOSE&quot;</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="551843636952690" type="System">
+                            <param id="0" name="Layer">1</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-18" name="Set layer opacity" sid="554147266610610" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Opacity">40</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="266344318111206" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="493475972510726" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="557984857876912">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="705907901774018" type="System">
+                            <param id="0" name="First value">Kartu.Count</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="877372828074063" type="System">
+                            <param id="0" name="Variable">mulaiGame</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="0" name="Set text" sid="193395223119967" type="TextGameover">
+                            <param id="0" name="Text">&quot;YOU WIN&quot;</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="835180948387294" type="System">
+                            <param id="0" name="Layer">1</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-18" name="Set layer opacity" sid="754821854048797" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Opacity">40</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="710029069617433" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="452080515667980" type="System" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
